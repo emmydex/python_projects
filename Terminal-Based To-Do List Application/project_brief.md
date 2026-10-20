@@ -27,4 +27,14 @@ Acceptance criteria
     ▪ Choosing an invalid option does not crash the application.
     ▪ Choosing Exit ends the program cleanly.
 
-
+# TASK 2
+User story: as a user, i want to see my tasks so i know what  needs to be done.
+    Requirements
+        ▪ Ask the user to enter a task description.
+        ▪ Reject empty or whitespace -only descriptions.
+        ▪ Store a valid task in the application's task collection.
+        ▪ Confirm that the task was added successfully.
+    Acceptance criteria
+        ▪ A valid task is stored.
+        ▪ An empty task is rejected.
+        ▪ The user receives feedback for both success and failure.
