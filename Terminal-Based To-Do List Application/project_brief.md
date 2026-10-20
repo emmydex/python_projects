@@ -8,8 +8,8 @@ Build a working application independently while practising Python fundermentals.
 These are the requirements the application must satisfy.
     treat each task below as a small development ticket. Work through them in order.
 
-# TASK 1 -
-Create the main menu.
+# TASK 1 - Create the main menu.
+~ Priority: High
 User story: As a user, i want to see a menu so i can choose what action to perform.
     Requirments
     ▪ Display the application name.
@@ -27,8 +27,9 @@ Acceptance criteria
     ▪ Choosing an invalid option does not crash the application.
     ▪ Choosing Exit ends the program cleanly.
 
-# TASK 2
-User story: as a user, i want to see my tasks so i know what  needs to be done.
+# TASK 2 - ADD A NEW TASK
+~ Priority: High
+User story: as a user, i want to add a task so i can remember something i need to do.
     Requirements
         ▪ Ask the user to enter a task description.
         ▪ Reject empty or whitespace -only descriptions.
@@ -38,3 +39,16 @@ User story: as a user, i want to see my tasks so i know what  needs to be done.
         ▪ A valid task is stored.
         ▪ An empty task is rejected.
         ▪ The user receives feedback for both success and failure.
+
+# TASK 3 - VIEW ALL TASKS
+~ Priority: High
+User story: As a user, i want to see my tasks so i know what  needs to be done.
+    Requirements
+        ▪ Display every stored task
+        ▪ Give each task a  visible number or identifier.
+        ▪ Show whether each task is pending or completed.
+        ▪ Display a helpful message whenno tasks exist.
+    Acceptance criteria
+        ▪ All stored tasks are displayed.
+        ▪ Each task's status is visible.
+        ▪ An empty task collection is handled correctly.
