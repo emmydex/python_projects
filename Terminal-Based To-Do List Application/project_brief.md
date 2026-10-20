@@ -4,88 +4,119 @@ bulid a command-line application that allows users to manage everyday tasks. The
 # Main Objective
 Build a working application independently while practising Python fundermentals.
 
-# Project Requirements
+# 1. Project Requirements
 These are the requirements the application must satisfy.
     treat each task below as a small development ticket. Work through them in order.
 
-# TASK 1 - Create the main menu.
-~ Priority: High
-User story: As a user, i want to see a menu so i can choose what action to perform.
-    Requirments
-    ▪ Display the application name.
-    ▪ Display these options:
-        ▪ Add a task
-        ▪ view all tasks
-        ▪ Mark a task as completed
-        ▪ Delete a task
-        ▪ Exit
-    ▪ Ask the user to enter an option.
-    ▪ Display a helpful message if the option is invalid.
-    ▪ Keep displaying the menu until the user chooses to exit.
-Acceptance criteria
-    ▪ The menu appears when the program starts.
-    ▪ Choosing an invalid option does not crash the application.
-    ▪ Choosing Exit ends the program cleanly.
-
-# TASK 2 - ADD A NEW TASK
-~ Priority: High
-User story: as a user, i want to add a task so i can remember something i need to do.
-    Requirements
-        ▪ Ask the user to enter a task description.
-        ▪ Reject empty or whitespace -only descriptions.
-        ▪ Store a valid task in the application's task collection.
-        ▪ Confirm that the task was added successfully.
+    # TASK 1 - Create the main menu.
+    ~ Priority: High
+    User story: As a user, i want to see a menu so i can choose what action to perform.
+        Requirments
+        ▪ Display the application name.
+        ▪ Display these options:
+            ▪ Add a task
+            ▪ view all tasks
+            ▪ Mark a task as completed
+            ▪ Delete a task
+            ▪ Exit
+        ▪ Ask the user to enter an option.
+        ▪ Display a helpful message if the option is invalid.
+        ▪ Keep displaying the menu until the user chooses to exit.
     Acceptance criteria
-        ▪ A valid task is stored.
-        ▪ An empty task is rejected.
-        ▪ The user receives feedback for both success and failure.
+        ▪ The menu appears when the program starts.
+        ▪ Choosing an invalid option does not crash the application.
+        ▪ Choosing Exit ends the program cleanly.
 
-# TASK 3 - VIEW ALL TASKS
-~ Priority: High
-User story: As a user, i want to see my tasks so i know what  needs to be done.
-    Requirements
-        ▪ Display every stored task
-        ▪ Give each task a  visible number or identifier.
-        ▪ Show whether each task is pending or completed.
-        ▪ Display a helpful message whenno tasks exist.
-    Acceptance criteria
-        ▪ All stored tasks are displayed.
-        ▪ Each task's status is visible.
-        ▪ An empty task collection is handled correctly.
+    # TASK 2 - ADD A NEW TASK
+    ~ Priority: High
+    User story: as a user, i want to add a task so i can remember something i need to do.
+        Requirements
+            ▪ Ask the user to enter a task description.
+            ▪ Reject empty or whitespace -only descriptions.
+            ▪ Store a valid task in the application's task collection.
+            ▪ Confirm that the task was added successfully.
+        Acceptance criteria
+            ▪ A valid task is stored.
+            ▪ An empty task is rejected.
+            ▪ The user receives feedback for both success and failure.
 
-# TASK 4 - MARK A TASK AS COMPLETED
-~ Priority: medium
-User story: As a user, i want to mark a task as completed so i can track my progress.
-    Requirements
-        ▪ Display the available tasks or their identifiers.
-        ▪ Ask which task the user wants to complete.
-        ▪ Update the selected task's status.
-        ▪ Handle invalid identifiers and already-completed tasks gracefully.
-    Acceptance criteria
-        ▪ The correct task is marked completed.
-        ▪ Other tasks remain unchanged.
-        ▪ Invalid selections do not crash the application.
+    # TASK 3 - VIEW ALL TASKS
+    ~ Priority: High
+    User story: As a user, i want to see my tasks so i know what  needs to be done.
+        Requirements
+            ▪ Display every stored task
+            ▪ Give each task a  visible number or identifier.
+            ▪ Show whether each task is pending or completed.
+            ▪ Display a helpful message whenno tasks exist.
+        Acceptance criteria
+            ▪ All stored tasks are displayed.
+            ▪ Each task's status is visible.
+            ▪ An empty task collection is handled correctly.
 
-# TASK 5 - DELETE A TASK
-~ Priority: Medium
-User story: As a user, i want to delete a task i no longer need
-    Requirements
-        ▪ Allow the userto select a task.
-        ▪ Remove the selected task from the collection.
-        ▪ Confirm successful deletion.
-        ▪ Handle invalid selections and an empty task collection.
-    Acceptance criteria
-        ▪ Only the selected task is deleted.
-        ▪ The remaining tasks can still be viewed.
-        ▪ Invalid selections are handled safely.
+    # TASK 4 - MARK A TASK AS COMPLETED
+    ~ Priority: medium
+    User story: As a user, i want to mark a task as completed so i can track my progress.
+        Requirements
+            ▪ Display the available tasks or their identifiers.
+            ▪ Ask which task the user wants to complete.
+            ▪ Update the selected task's status.
+            ▪ Handle invalid identifiers and already-completed tasks gracefully.
+        Acceptance criteria
+            ▪ The correct task is marked completed.
+            ▪ Other tasks remain unchanged.
+            ▪ Invalid selections do not crash the application.
 
-# TASK 6 - HANDLE ERRORS AND EDGE CASES
-User story: As a user, i want the application to handle mistakes without unexpectedly crashing.
-    Requirments
-        ▪ Handle non-numeric input when  a number is required.
-        ▪ Handle task identifiers that do not exist.
-        ▪ Handle attempts to complete or delete tasks when no tasks exist
-        ▪ Keep the application usable after invalid input.
-    acceptance criteria
-        ▪ Expected user mistakes produce helpful messages.
-        ▪ The program continues running when it can safely recover.
+    # TASK 5 - DELETE A TASK
+    ~ Priority: Medium
+    User story: As a user, i want to delete a task i no longer need
+        Requirements
+            ▪ Allow the userto select a task.
+            ▪ Remove the selected task from the collection.
+            ▪ Confirm successful deletion.
+            ▪ Handle invalid selections and an empty task collection.
+        Acceptance criteria
+            ▪ Only the selected task is deleted.
+            ▪ The remaining tasks can still be viewed.
+            ▪ Invalid selections are handled safely.
+
+    # TASK 6 - HANDLE ERRORS AND EDGE CASES
+    User story: As a user, i want the application to handle mistakes without unexpectedly crashing.
+        Requirments
+            ▪ Handle non-numeric input when  a number is required.
+            ▪ Handle task identifiers that do not exist.
+            ▪ Handle attempts to complete or delete tasks when no tasks exist
+            ▪ Keep the application usable after invalid input.
+        acceptance criteria
+            ▪ Expected user mistakes produce helpful messages.
+            ▪ The program continues running when it can safely recover.
+
+# 2. Technicaal Constraints
+Work within these rules for Version 1:
+    ▪ Use python
+    ▪ use the terminal for input and output.
+    ▪ keep task data in memory for now. Closing the program may erase it; persistence is a later feature.
+    ▪ Use a list or another suitable built-in data structure to manage tasks.
+    ▪ Do not use tkinter yet
+    ▪ Do not install external libraries
+    ▪ Start with a single python file. You can refactor later.
+
+You are free to decide how to represent a task, how to organize the code, and how to prevent invalid input from causing problems. Those design decisions are part of the exercise.
+
+
+# 3. Suggested Development workflow
+Ths is how i wold handle the project development
+    1. Set up the project repo
+    2. Plan the logic
+    3. Implement incrementally
+    4. Test and debug each tasks
+    5. Review and Refactor
+
+# 4. Defination of a Completed project
+The project is only complete when:
+    ▪ The menu keeps running until Exit is selected.
+    ▪ Tasks can be added and Displayed.
+    ▪ Tasks can be marked completed
+    ▪ Tasks can be deleted.
+    ▪ invald input is handled gracefully.
+    ▪ All acceptance criteria pass your manual tests.
+    ▪ The code is understandable enough for you to explain it without reading every line.
