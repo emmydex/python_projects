@@ -52,3 +52,40 @@ User story: As a user, i want to see my tasks so i know what  needs to be done.
         ▪ All stored tasks are displayed.
         ▪ Each task's status is visible.
         ▪ An empty task collection is handled correctly.
+
+# TASK 4 - MARK A TASK AS COMPLETED
+~ Priority: medium
+User story: As a user, i want to mark a task as completed so i can track my progress.
+    Requirements
+        ▪ Display the available tasks or their identifiers.
+        ▪ Ask which task the user wants to complete.
+        ▪ Update the selected task's status.
+        ▪ Handle invalid identifiers and already-completed tasks gracefully.
+    Acceptance criteria
+        ▪ The correct task is marked completed.
+        ▪ Other tasks remain unchanged.
+        ▪ Invalid selections do not crash the application.
+
+# TASK 5 - DELETE A TASK
+~ Priority: Medium
+User story: As a user, i want to delete a task i no longer need
+    Requirements
+        ▪ Allow the userto select a task.
+        ▪ Remove the selected task from the collection.
+        ▪ Confirm successful deletion.
+        ▪ Handle invalid selections and an empty task collection.
+    Acceptance criteria
+        ▪ Only the selected task is deleted.
+        ▪ The remaining tasks can still be viewed.
+        ▪ Invalid selections are handled safely.
+
+# TASK 6 - HANDLE ERRORS AND EDGE CASES
+User story: As a user, i want the application to handle mistakes without unexpectedly crashing.
+    Requirments
+        ▪ Handle non-numeric input when  a number is required.
+        ▪ Handle task identifiers that do not exist.
+        ▪ Handle attempts to complete or delete tasks when no tasks exist
+        ▪ Keep the application usable after invalid input.
+    acceptance criteria
+        ▪ Expected user mistakes produce helpful messages.
+        ▪ The program continues running when it can safely recover.
