@@ -26,4 +26,9 @@ except:
 
 
 def new_task():
-    task_input = input("enter new task")
+    task_input = input("enter new task ")
+    tasks.append({"task": task_input, "Done": False})
+    print(f"task '{task_input}' added succesfully")
+
+new_task()
+print(tasks)
