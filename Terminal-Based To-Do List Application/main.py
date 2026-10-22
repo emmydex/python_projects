@@ -19,7 +19,6 @@ try:
 # askiing the user to pick an option
     choose = int(input("choose an option"))    
     if choose not in list:
-        print("not a valid input")
-                
+        print("not a valid input")               
 except:
-    print(" oops!, try again")
+    print(" oops!, not a valid input; try again")
