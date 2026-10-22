@@ -1,5 +1,6 @@
 task = []            
 
+
 # created the Main menu
 def main_menu():
     print("----Terminal Based To-Do List----")
@@ -10,10 +11,14 @@ def main_menu():
     print("4. Delete a task")
     print("5. Exit")
 
-    # askiing the user to pick an option
-    choose = int(input("choose an option"))
-
 main_menu()
 
-def add_task():
-    add-task = input("")
+
+try:
+# askiing the user to pick an option
+    choose = int(input("choose an option"))    
+    if choose != [1,2,3,4,5]:
+        print("not a valid input")
+                
+except:
+    print(" oops!, that is not a valid option; try again")
