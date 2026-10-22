@@ -30,5 +30,15 @@ def new_task():
     tasks.append({"task": task_input, "Done": False})
     print(f"task '{task_input}' added succesfully")
 
+    #this function is to validate input not having empty string or whitespace only
+    def validate_task_input(task_input):
+        if not task_input or not task_input.strip():
+            raise ValueError("cannot be empty or whitespace only.")
+
+        return task_input
+
+    validate_task_input(task_input)
+    
+
 new_task()
 print(tasks)
