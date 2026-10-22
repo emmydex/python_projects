@@ -1,4 +1,4 @@
-task = []            
+tasks = []            
 
 
 # created the Main menu
@@ -18,8 +18,12 @@ list = [1,2,3,4,5]
 
 try:
 
-    choose = int(input("choose an option"))    
+    choose = int(input("choose an option "))    
     if choose not in list:
         print("not a valid input")               
 except:
     print(" oops!, not a valid input; try again")
+
+
+def new_task():
+    task_input = input("enter new task")
