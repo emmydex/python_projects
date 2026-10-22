@@ -18,7 +18,7 @@ list = [1,2,3,4,5]
 try:
 # askiing the user to pick an option
     choose = int(input("choose an option"))    
-    if not choose:
+    if choose not in list:
         print("not a valid input")
                 
 except:
