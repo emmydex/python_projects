@@ -28,14 +28,14 @@ except:
 def new_task():
     task_input = input("enter new task ")
     tasks.append({"task": task_input, "Done": False})
-    print(f"task '{task_input}' added succesfully")
+    
 
     #this function is to validate input not having empty string or whitespace only
     def validate_task_input():
         if not task_input or not task_input.strip():
             print("cannot be empty or whitespace only.")
-
-        # return task_input
+        else:
+            print(f"task '{task_input}' added succesfully")
 
     validate_task_input()
     
