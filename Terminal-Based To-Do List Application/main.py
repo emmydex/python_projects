@@ -24,7 +24,7 @@ try:
 except:
     print(" oops!, not a valid input; try again")
 
-
+# this function adds a new task and appends it to the tasks list
 def new_task():
     task_input = input("enter new task ")
     tasks.append({"task": task_input, "Done": False})
