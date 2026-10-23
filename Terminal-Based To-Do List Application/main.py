@@ -43,6 +43,9 @@ def new_task():
 new_task()
 
 def show_task():
-    print(f"This are all the added: {tasks}")
+    if tasks:
+        print("no tasks available")
+    else:
+        print(f"This are all the added: {tasks}")
 
 show_task()
