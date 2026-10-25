@@ -42,6 +42,8 @@ def new_task():
 
 new_task()
 
+# there is a bug in this section: so i am saying if tasks is true it should print
+# notasks available
 def show_task():
     if tasks:
         print("no tasks available")
