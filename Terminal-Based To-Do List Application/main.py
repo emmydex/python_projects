@@ -24,9 +24,13 @@ try:
 except:
     print(" oops!, not a valid input; try again")
 
+
+task_input = input("enter new task ")
+
+
 # this function adds a new task and appends it to the tasks list
 def new_task():
-    task_input = input("enter new task ")
+    
     tasks.append({"task": task_input, "Done": False})
     
 
@@ -51,7 +55,7 @@ new_task()
 # probably i should use the 'and ' and  the choose input too
 
 def show_task():
-    if tasks != [] :
+    if task_input :
         print(f"This are all the added: {tasks}")
     else:
         print("no tasks available")
