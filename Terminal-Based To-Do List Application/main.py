@@ -16,6 +16,9 @@ main_menu()
 # askiing the user to pick an option
 list = [1,2,3,4,5]
 
+
+# the function does not prompt user to enter another option when an invalid input is used
+# thats the bug i am facing currently
 try:
 
     choose = int(input("choose an option "))    
