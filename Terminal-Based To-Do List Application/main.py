@@ -51,7 +51,7 @@ new_task()
 # probably i should use the 'and ' and  the choose input too
 
 def show_task():
-    if choose and tasks :
+    if tasks != [] :
         print(f"This are all the added: {tasks}")
     else:
         print("no tasks available")
