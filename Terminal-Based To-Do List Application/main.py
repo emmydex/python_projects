@@ -47,6 +47,9 @@ new_task()
 
 # what i am trying to acheive is print no task available when there is nothing in
 # tasks
+# the logic works when a list is added the else statement also works when i pass an empty string
+# probably i should use the 'and ' and  the choose input too
+
 def show_task():
     if not tasks :
         print("no tasks available")
