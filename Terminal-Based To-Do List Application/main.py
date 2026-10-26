@@ -48,7 +48,7 @@ new_task()
 # what i am trying to acheive is print no task available when there is nothing in
 # tasks
 def show_task():
-    if tasks >= 1:
+    if not tasks :
         print(f"This are all the added: {tasks}")
     else:
         print("no tasks available")
