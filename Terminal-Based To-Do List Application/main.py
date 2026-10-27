@@ -19,13 +19,19 @@ list = [1,2,3,4,5]
 
 # the function does not prompt user to enter another option when an invalid input is used
 # thats the bug i am facing currently
-try:
 
-    choose = int(input("choose an option "))    
-    if choose not in list:
-        print("not a valid input")               
-except:
-    print(" oops!, not a valid input; try again")
+while True:
+    try:
+
+        choose = int(input("choose an option "))    
+        if choose not in list:
+            print("not a valid input")
+            continue
+        
+        break
+                          
+    except ValueError:
+         print(" oops!, not a valid input; try again")
 
 
 task_input = input("enter new task ")
