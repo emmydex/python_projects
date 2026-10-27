@@ -17,9 +17,8 @@ main_menu()
 list = [1,2,3,4,5]
 
 
-# the function does not prompt user to enter another option when an invalid input is used
-# thats the bug i am facing currently
-
+# passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
+# else the loop breaks and there is also an exption for a ValueError.
 while True:
     try:
 
