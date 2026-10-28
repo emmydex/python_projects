@@ -24,13 +24,13 @@ while True:
 
         choose = int(input("choose an option "))    
         if choose not in list:
-            print("not a valid input")
+            print("not a valid input, try again")
             continue
         
         break
                           
     except ValueError:
-         print(" oops!, not a valid input; try again")
+         print(" oops!, not a valid input")
 
 
 task_input = input("enter new task ")
