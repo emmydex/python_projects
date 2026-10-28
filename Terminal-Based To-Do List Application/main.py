@@ -64,3 +64,7 @@ def show_task():
         print("no tasks available")
 
 show_task()
+
+
+def mark_complete():
+    show_task()
