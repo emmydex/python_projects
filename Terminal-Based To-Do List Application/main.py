@@ -54,9 +54,6 @@ def new_task():
 
 new_task()
 
-# bug fixed, i had to initalize the task_input variable outside the function so the functions can 
-# refer to it, and that solved my bug
-
 def show_task():
     if task_input :
         print(f"This are all the added: {tasks}")
@@ -65,6 +62,10 @@ def show_task():
 
 show_task()
 
-
+# this function shows the tasks and marks the selected ones as done
 def mark_complete():
     show_task()
+
+
+
+mark_complete()
