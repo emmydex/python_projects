@@ -67,7 +67,8 @@ show_task()
 # this function shows the tasks and marks the selected ones as done
 def mark_complete():
     show_task()
-
+    if not tasks:
+        return
 
 
 mark_complete()
