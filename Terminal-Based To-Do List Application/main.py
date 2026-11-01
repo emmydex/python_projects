@@ -70,5 +70,6 @@ def mark_complete():
     if not tasks:
         return
 
+# see ya tomorrow i guess
 
 mark_complete()
