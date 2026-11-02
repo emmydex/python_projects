@@ -37,7 +37,9 @@ task_input = input("enter new task ")
 
 
 # this function adds a new task and appends it to the tasks list
-def new_task():
+
+#1
+def new_task(): 
     
     tasks.append({"task": task_input, "Done": False})
     
@@ -54,6 +56,7 @@ def new_task():
 
 new_task()
 
+#2, how do i give the tasks a visible number or identifer
 def show_task():
     if task_input :
         print(f"This are all the added: {tasks}")
@@ -62,14 +65,29 @@ def show_task():
 
 show_task()
 
-
-# i would be back tomorrow my ba3 is low on juice
 # this function shows the tasks and marks the selected ones as done
+
+#3
 def mark_complete():
     show_task()
     if not tasks:
         return
 
-# see ya tomorrow i guess
+    try:
+        index = int(input("Enter task number to mark done: "))-1
+        if 0 <= index < len(tasks):
+            tasks[index]["done"] = True
+            print("Marked as done!")
+        else:
+            print("invalid number!")
+    except ValueError:
+        print("Please enter a valid number")
 
 mark_complete()
+
+
+def delete_task():
+    print(tasks)
+    # how do i select the value in a list
+
+delete_task()
