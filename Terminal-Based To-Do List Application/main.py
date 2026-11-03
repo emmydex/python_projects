@@ -58,11 +58,11 @@ new_task()
 
 #2, how do i give the tasks a visible number or identifer
 # i am introduced to enumerate
+# issue solved successfully
 def show_task():
     for number, task in enumerate(tasks, start=1):
         if task_input :
-            print(f"{number}, {task}")
-            print(f"This are all the added: {tasks}")
+            print(f"This are all the added tasks: {number}, {task}")
         else:
             print("no tasks available")
 
