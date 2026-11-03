@@ -2,6 +2,7 @@ tasks = []
 
 
 # created the Main menu
+# how do i keep displaying the menu until the user chooses to exit the application
 def main_menu():
     print("----Terminal Based To-Do List----")
     print("----Main Menu----")
@@ -56,9 +57,6 @@ def new_task():
 
 new_task()
 
-#2, how do i give the tasks a visible number or identifer
-# i am introduced to enumerate
-# issue solved successfully
 def show_task():
     for number, task in enumerate(tasks, start=1):
         if task_input :
