@@ -12,27 +12,28 @@ def main_menu():
     print("4. Delete a task")
     print("5. Exit")
 
+
+
+    # askiing the user to pick an option
+    list = [1,2,3,4,5]
+
+
+    # passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
+    # else the loop breaks and there is also an exption for a ValueError.
+    while True:
+        try:
+
+            choose = int(input("choose an option "))    
+            if choose not in list:
+                print("not a valid input, try again")
+                continue
+            
+            break
+                            
+        except ValueError:
+            print(" oops!, not a valid input")
+
 main_menu()
-
-# askiing the user to pick an option
-list = [1,2,3,4,5]
-
-
-# passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
-# else the loop breaks and there is also an exption for a ValueError.
-while True:
-    try:
-
-        choose = int(input("choose an option "))    
-        if choose not in list:
-            print("not a valid input, try again")
-            continue
-        
-        break
-                          
-    except ValueError:
-         print(" oops!, not a valid input")
-
 
 task_input = input("enter new task ")
 
@@ -71,18 +72,24 @@ show_task()
 #3
 def mark_complete():
     show_task()
-    if not tasks:
-        return
+    while True:
+        if not tasks:
+            return
 
-    try:
-        index = int(input("Enter task number to mark done: "))-1
-        if 0 <= index < len(tasks):
-            tasks[index]["done"] = True
-            print("Marked as done!")
-        else:
-            print("invalid number!")
-    except ValueError:
-        print("Please enter a valid number")
+        try:
+            index = int(input("Enter task number to mark done: "))-1
+            if 0 >= index > len(tasks):
+                print("invalid number!")
+                continue
+            
+            else:
+                tasks[index]["done"] = True
+                print("Marked as done!")
+            break   
+
+            
+        except ValueError:
+            print("Please enter a valid number")
 
 mark_complete()
 
