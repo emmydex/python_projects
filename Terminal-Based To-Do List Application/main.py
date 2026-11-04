@@ -85,7 +85,9 @@ def mark_complete():
                 continue
             
             else:
-                tasks["done"] = True
+                # i was calling the index of a lowercase ["done"] instead of ["Done"],
+                # so it kept printing ["Done"] = False together with ["done"] = True
+                tasks[index]["Done"] = True
                 print("Marked as done!")
             break
 
@@ -118,3 +120,5 @@ def delete_task():
             print("Enter a valid input")
 
 delete_task()
+
+print(tasks)
