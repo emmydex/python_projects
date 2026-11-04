@@ -72,6 +72,8 @@ show_task()
 #3
 def mark_complete():
     show_task()
+    # i wrapped this in a while loop so i can catch the wrong input and prompt the user
+    # to try again.
     while True:
         if not tasks:
             return
@@ -87,8 +89,8 @@ def mark_complete():
                 print("Marked as done!")
             break
 
-            
-        except ValueError:
+            # this exeption should catch both the ValueError and IndexError
+        except ValueError, IndexError:
             print("Please enter a valid number")
 
 mark_complete()
