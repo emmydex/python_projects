@@ -85,7 +85,7 @@ def mark_complete():
             else:
                 tasks[index]["done"] = True
                 print("Marked as done!")
-            break   
+            break
 
             
         except ValueError:
