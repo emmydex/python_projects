@@ -65,7 +65,7 @@ def show_task():
         else:
             print("no tasks available")
 
-show_task()
+# show_task()
 
 # this function shows the tasks and marks the selected ones as done
 
@@ -83,15 +83,15 @@ def mark_complete():
             if 0 >= index > len(tasks):
                 print("invalid number!, try again")
                 continue
-            
+                
             else:
                 # i was calling the index of a lowercase ["done"] instead of ["Done"],
                 # so it kept printing ["Done"] = False together with ["done"] = True
                 tasks[index]["Done"] = True
                 print("Marked as done!")
-            break
+                break
 
-            # this exeption should catch both the ValueError and IndexError
+                # this exeption should catch both the ValueError and IndexError
         except ValueError, IndexError:
             print("Please enter a valid number")
 
