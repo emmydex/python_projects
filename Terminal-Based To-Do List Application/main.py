@@ -81,11 +81,11 @@ def mark_complete():
         try:
             index = int(input("Enter task number to mark done: "))-1
             if 0 >= index > len(tasks):
-                print("invalid number!")
+                print("invalid number!, try again")
                 continue
             
             else:
-                tasks[index]["done"] = True
+                tasks["done"] = True
                 print("Marked as done!")
             break
 
@@ -98,6 +98,23 @@ mark_complete()
 
 def delete_task():
     print(tasks)
-    # how do i select the value in a list
+
+    while True:
+        if not tasks:
+            return
+
+        try:
+            # i have to minus 1 from the input cause indexing starts at 0
+            delete = int(input("Select task to delete: "))-1
+            if 0 >= delete > len(tasks):
+                print("invalid input, try again")
+                continue
+            else:
+                del_task = tasks.pop(delete)
+                print("task successfully deleted")
+            break
+
+        except ValueError, IndexError:
+            print("Enter a valid input")
 
 delete_task()
