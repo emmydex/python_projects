@@ -15,6 +15,7 @@ def main_menu():
 
 
     # askiing the user to pick an option 
+    # using a dictionary to map keys to a function objects
     list = {1 : new_task,
             2 : show_task,
             3 : mark_complete,
