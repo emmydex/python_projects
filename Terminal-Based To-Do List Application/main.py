@@ -14,8 +14,12 @@ def main_menu():
 
 
 
-    # askiing the user to pick an option
-    list = [1,2,3,4,5]
+    # askiing the user to pick an option 
+    list = {1 : new_task,
+            2 : show_task,
+            3 : mark_complete,
+            4 : delete_task,
+            5 : exit_program}
 
 
     # passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
@@ -58,6 +62,7 @@ def new_task():
 
 new_task()
 
+#2
 def show_task():
     for number, task in enumerate(tasks, start=1):
         if task_input :
@@ -97,7 +102,7 @@ def mark_complete():
 
 mark_complete()
 
-
+#4
 def delete_task():
     print(tasks)
 
@@ -120,5 +125,8 @@ def delete_task():
             print("Enter a valid input")
 
 delete_task()
+
+def exit_program():
+    print("closing program")
 
 print(tasks)
