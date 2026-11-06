@@ -2,7 +2,7 @@ tasks = []
 
 
 
-
+task_input = input("enter new task ")
 
 
 # created the Main menu
@@ -133,7 +133,7 @@ def main_menu():
         except ValueError:
             print(" oops!, not a valid input")
 
-    task_input = input("enter new task ")
+    
 
 
 main_menu()
