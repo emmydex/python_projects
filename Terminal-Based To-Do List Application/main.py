@@ -2,7 +2,7 @@ tasks = []
 
 
 
-task_input = input("enter new task ")
+
 
 
 # created the Main menu
@@ -18,7 +18,7 @@ def main_menu():
 
 
 
-
+    task_input = input("enter new task ")
 
 
     # this function adds a new task and appends it to the tasks list
