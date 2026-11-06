@@ -18,31 +18,7 @@ def main_menu():
 
 
 
-    # askiing the user to pick an option 
-    # using a dictionary to map keys to a function objects
-    list = {1 : new_task,
-            2 : show_task,
-            3 : mark_complete,
-            4 : delete_task,
-            5 : exit_program}
 
-
-    # passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
-    # else the loop breaks and there is also an exption for a ValueError.
-    while True:
-        try:
-
-            choose = int(input("choose an option "))    
-            if choose not in list:
-                print("not a valid input, try again")
-                continue
-            
-            break
-                            
-        except ValueError:
-            print(" oops!, not a valid input")
-
-    task_input = input("enter new task ")
 
 
     # this function adds a new task and appends it to the tasks list
@@ -103,7 +79,7 @@ def main_menu():
             except ValueError, IndexError:
                 print("Please enter a valid number")
 
-    mark_complete()
+   # mark_complete()
 
     #4
     def delete_task():
@@ -127,10 +103,38 @@ def main_menu():
             except ValueError, IndexError:
                 print("Enter a valid input")
 
-    delete_task()
+   # delete_task()
 
     def exit_program():
         print("closing program")
+
+
+        # askiing the user to pick an option 
+    # using a dictionary to map keys to a function objects
+    list = {1 : new_task,
+            2 : show_task,
+            3 : mark_complete,
+            4 : delete_task,
+            5 : exit_program}
+
+
+    # passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
+    # else the loop breaks and there is also an exption for a ValueError.
+    while True:
+        try:
+
+            choose = int(input("choose an option "))    
+            if choose not in list:
+                print("not a valid input, try again")
+                continue
+            
+            break
+                            
+        except ValueError:
+            print(" oops!, not a valid input")
+
+    task_input = input("enter new task ")
+
 
 main_menu()
 
