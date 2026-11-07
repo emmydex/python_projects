@@ -25,31 +25,7 @@ main_menu()
 
     # passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
     # else the loop breaks and there is also an exption for a ValueError.
-    while True:
-        try:
 
-            choose = int(input("choose an option "))    
-            if choose not in list:
-                print("not a valid input, try again")
-                continue
-
-
-            # trying to assign each input to call its respected function
-            if choose == list[1]:
-                new_task
-            elif choose == list[2]:
-                show_task
-            elif choose == list[3]:
-                mark_complete
-            elif choose == list[4]:
-                delete_task
-            else:
-                exit_program
-            
-            break
-                            
-        except ValueError:
-            print(" oops!, not a valid input")
 
 
 
@@ -146,7 +122,31 @@ def exit_program():
 
 
 
+while True:
+    try:
 
+        choose = int(input("choose an option "))    
+        if choose not in list:
+            print("not a valid input, try again")
+            continue
+
+
+            # trying to assign each input to call its respected function
+        if choose == list[1]:
+            new_task
+        elif choose == list[2]:
+            show_task
+        elif choose == list[3]:
+            mark_complete
+        elif choose == list[4]:
+            delete_task
+        else:
+            exit_program
+            
+        break
+                            
+    except ValueError:
+        print(" oops!, not a valid input")
 
 
 print(tasks)
