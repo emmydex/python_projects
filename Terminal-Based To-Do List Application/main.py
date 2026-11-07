@@ -21,6 +21,7 @@ def main_menu():
             4 : delete_task,
             5 : exit_program}
 
+main_menu()
 
     # passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
     # else the loop breaks and there is also an exption for a ValueError.
