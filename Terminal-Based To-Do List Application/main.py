@@ -15,138 +15,141 @@ def main_menu():
 
             # askiing the user to pick an option 
     # using a dictionary to map keys to a function objects
+
     list = {1 : new_task,
-            2 : show_task,
-            3 : mark_complete,
-            4 : delete_task,
-            5 : exit_program}
-
-main_menu()
-
-    # passing the continue to the if statement so if user chooses an option not in the list the continue keeps prompting the user
-    # else the loop breaks and there is also an exption for a ValueError.
+        2 : show_task,
+        3 : mark_complete,
+        4 : delete_task,
+        5 : exit_program}
 
 
-
-
-task_input = input("enter new task ")
-
-
-
-    # this function adds a new task and appends it to the tasks list
-
-    #1
-def new_task(): 
-        
-        tasks.append({"task": task_input, "Done": False})
-        
-
-        #this function is to validate input not having empty string or whitespace only
-        def validate_task_input():
-            if not task_input or not task_input.strip():
-                print("cannot be empty or whitespace only.")
-            else:
-                print(f"task '{task_input}' added succesfully")
-
-        validate_task_input()
-        
-
-# new_task()
-
-    #2
-def show_task():
-        for number, task in enumerate(tasks, start=1):
-            if task_input :
-                print(f"This are all the added tasks: {number}, {task}")
-            else:
-                print("no tasks available")
-
-    # show_task()
-
-    # this function shows the tasks and marks the selected ones as done
-
-    #3
-def mark_complete():
-    show_task()
-        # i wrapped this in a while loop so i can catch the wrong input and prompt the user
-        # to try again.
     while True:
-        if not tasks:
-            return
-
         try:
-            index = int(input("Enter task number to mark done: "))-1
-            if 0 >= index > len(tasks):
-                print("invalid number!, try again")
+
+            choose = int(input("choose an option "))    
+            if choose not in list:
+                print("not a valid input, try again")
                 continue
-                    
+
+
+                # trying to assign each input to call its respected function
+            if choose == list[1]:
+                new_task
+            elif choose == list[2]:
+                show_task
+            elif choose == list[3]:
+                mark_complete
+            elif choose == list[4]:
+                delete_task
             else:
-                    # i was calling the index of a lowercase ["done"] instead of ["Done"],
-                    # so it kept printing ["Done"] = False together with ["done"] = True
-                tasks[index]["Done"] = True
-                print("Marked as done!")
-                break
+                exit_program
+                
+            break
+                                
+        except ValueError:
+            print(" oops!, not a valid input")
 
-                    # this exeption should catch both the ValueError and IndexError
-        except ValueError, IndexError:
-            print("Please enter a valid number")
 
-   # mark_complete()
 
-    #4
-def delete_task():
-        print(tasks)
 
+
+    task_input = input("enter new task ")
+
+
+
+        # this function adds a new task and appends it to the tasks list
+
+        #1
+    def new_task(): 
+            
+            tasks.append({"task": task_input, "Done": False})
+            
+
+            #this function is to validate input not having empty string or whitespace only
+            def validate_task_input():
+                if not task_input or not task_input.strip():
+                    print("cannot be empty or whitespace only.")
+                else:
+                    print(f"task '{task_input}' added succesfully")
+
+            validate_task_input()
+            
+
+    # new_task()
+
+        #2
+    def show_task():
+            for number, task in enumerate(tasks, start=1):
+                if task_input :
+                    print(f"This are all the added tasks: {number}, {task}")
+                else:
+                    print("no tasks available")
+
+        # show_task()
+
+        # this function shows the tasks and marks the selected ones as done
+
+        #3
+    def mark_complete():
+        show_task()
+            # i wrapped this in a while loop so i can catch the wrong input and prompt the user
+            # to try again.
         while True:
             if not tasks:
                 return
 
             try:
-                # i have to minus 1 from the input cause indexing starts at 0
-                delete = int(input("Select task to delete: "))-1
-                if 0 >= delete > len(tasks):
-                    print("invalid input, try again")
+                index = int(input("Enter task number to mark done: "))-1
+                if 0 >= index > len(tasks):
+                    print("invalid number!, try again")
                     continue
+                        
                 else:
-                    del_task = tasks.pop(delete)
-                    print("task successfully deleted")
-                break
+                        # i was calling the index of a lowercase ["done"] instead of ["Done"],
+                        # so it kept printing ["Done"] = False together with ["done"] = True
+                    tasks[index]["Done"] = True
+                    print("Marked as done!")
+                    break
 
+                        # this exeption should catch both the ValueError and IndexError
             except ValueError, IndexError:
-                print("Enter a valid input")
+                print("Please enter a valid number")
 
-   # delete_task()
+    # mark_complete()
 
-def exit_program():
-        print("closing program")
+        #4
+    def delete_task():
+            print(tasks)
 
+            while True:
+                if not tasks:
+                    return
 
+                try:
+                    # i have to minus 1 from the input cause indexing starts at 0
+                    delete = int(input("Select task to delete: "))-1
+                    if 0 >= delete > len(tasks):
+                        print("invalid input, try again")
+                        continue
+                    else:
+                        del_task = tasks.pop(delete)
+                        print("task successfully deleted")
+                    break
 
-while True:
-    try:
+                except ValueError, IndexError:
+                    print("Enter a valid input")
 
-        choose = int(input("choose an option "))    
-        if choose not in list:
-            print("not a valid input, try again")
-            continue
+    # delete_task()
 
-
-            # trying to assign each input to call its respected function
-        if choose == list[1]:
-            new_task
-        elif choose == list[2]:
-            show_task
-        elif choose == list[3]:
-            mark_complete
-        elif choose == list[4]:
-            delete_task
-        else:
-            exit_program
-            
-        break
-                            
-    except ValueError:
-        print(" oops!, not a valid input")
+    def exit_program():
+            print("closing program")
 
 
+
+
+
+
+
+
+main_menu()
 print(tasks)
