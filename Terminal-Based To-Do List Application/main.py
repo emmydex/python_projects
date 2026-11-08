@@ -1,4 +1,5 @@
 tasks = []            
+list = {}
 
 
 # created the Main menu
@@ -16,15 +17,13 @@ def main_menu():
             # askiing the user to pick an option 
     # using a dictionary to map keys to a function objects
 
-    list = {1 : new_task,
-        2 : show_task,
-        3 : mark_complete,
-        4 : delete_task,
-        5 : exit_program}
 
+    
 
     while True:
         try:
+
+            
 
             choose = int(input("choose an option "))    
             if choose not in list:
@@ -51,7 +50,11 @@ def main_menu():
 
 
 
-
+    list = {1 : new_task,
+            2 : show_task,
+            3 : mark_complete,
+            4 : delete_task,
+            5 : exit_program}
 
     task_input = input("enter new task ")
 
