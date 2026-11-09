@@ -14,21 +14,12 @@ def main_menu():
     print("5. Exit")
 
 
-            # askiing the user to pick an option 
-    # using a dictionary to map keys to a function objects
-
-
-    # see y9ou t9omorrow 
+    
 
     while True:
         try:
-            
-            list = {1 : new_task,
-                        2 : show_task,
-                        3 : mark_complete,
-                        4 : delete_task,
-                        5 : exit_program}
-
+            # probably dont need a dictionary i think i can bind the function with a list 
+            list = [1,2,3,4,5]
             
 
             choose = int(input("choose an option "))    
