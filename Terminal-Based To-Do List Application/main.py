@@ -1,14 +1,12 @@
 tasks = []            
-list = [1,2,3,4,5]
+
 
 
 # created the Main menu
 # how do i keep displaying the menu until the user chooses to exit the application
+   
 
-
-
-
-        # this function adds a new task and appends it to the tasks list
+    # this function adds a new task and appends it to the tasks list
 
         #1
 def new_task(): 
@@ -107,43 +105,34 @@ def main_menu():
     print("5. Exit")
 
 
+    # i found out about dispach dictionary
     
 
     while True:
         try:
-            # probably dont need a dictionary i think i can bind the function with a list 
+            # trying to map choose to the functions using dispach dictionary
             
-            
+            list = {1 : new_task, 2 : show_task, 3 : mark_complete, 4 : delete_task, 5 : exit_program}
 
             choose = int(input("choose an option "))    
             if choose not in list:
                 print("not a valid input, try again")
+                continue
 
-
-                # trying to assign each input to call its respected function
-            if choose == 1:
-                new_task
-            elif choose == 2:
-                show_task
-            elif choose == 3:
-                mark_complete
-            elif choose == 4:
-                delete_task
-            else:
-                print("exiting program")
-                     # exit_program
-                continue    
+            elif choose in list:
+                list[choose]() # calls the function
+                    
             break
                                 
         except ValueError:
             print(" oops!, not a valid input")
 
+
+
 main_menu()
 
     
-
-task_input = input("enter new task ")
-
+task_input = input("enter new task ") 
 
 
 
