@@ -38,25 +38,25 @@ def main_menu():
                 delete_task
             else:
                 print("exiting program")
-                    # exit_program
+                     # exit_program
                 continue    
             break
                                 
         except ValueError:
             print(" oops!, not a valid input")
 
-
+main_menu()
 
     
 
-    task_input = input("enter new task ")
+task_input = input("enter new task ")
 
 
 
         # this function adds a new task and appends it to the tasks list
 
         #1
-    def new_task(): 
+def new_task(): 
             
             tasks.append({"task": task_input, "Done": False})
             
@@ -74,7 +74,7 @@ def main_menu():
     # new_task()
 
         #2
-    def show_task():
+def show_task():
             for number, task in enumerate(tasks, start=1):
                 if task_input :
                     print(f"This are all the added tasks: {number}, {task}")
@@ -86,7 +86,7 @@ def main_menu():
         # this function shows the tasks and marks the selected ones as done
 
         #3
-    def mark_complete():
+def mark_complete():
         show_task()
             # i wrapped this in a while loop so i can catch the wrong input and prompt the user
             # to try again.
@@ -114,7 +114,7 @@ def main_menu():
     # mark_complete()
 
         #4
-    def delete_task():
+def delete_task():
             print(tasks)
 
             while True:
@@ -137,9 +137,10 @@ def main_menu():
 
     # delete_task()
 
-    def exit_program():
+def exit_program():
             print("closing program")
 
+    
 
 
 
@@ -147,5 +148,4 @@ def main_menu():
 
 
 
-main_menu()
 print(tasks)
