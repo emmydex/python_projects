@@ -22,6 +22,12 @@ def main_menu():
 
     while True:
         try:
+            
+            list = {1 : new_task,
+                        2 : show_task,
+                        3 : mark_complete,
+                        4 : delete_task,
+                        5 : exit_program}
 
             
 
@@ -50,11 +56,7 @@ def main_menu():
 
 
 
-    list = {1 : new_task,
-            2 : show_task,
-            3 : mark_complete,
-            4 : delete_task,
-            5 : exit_program}
+    
 
     task_input = input("enter new task ")
 
