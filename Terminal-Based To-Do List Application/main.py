@@ -2,9 +2,7 @@ tasks = []
 
 
 
-# created the Main menu
-# how do i keep displaying the menu until the user chooses to exit the application
-   
+
 
     # this function adds a new task and appends it to the tasks list
 
@@ -96,6 +94,9 @@ def exit_program():
 
     
 
+# created the Main menu
+# how do i keep displaying the menu until the user chooses to exit the application
+   
 def main_menu():
     print("----Terminal Based To-Do List----")
     print("----Main Menu----")
