@@ -1,5 +1,5 @@
 tasks = []            
-list = {}
+list = [1,2,3,4,5]
 
 
 # created the Main menu
@@ -19,27 +19,27 @@ def main_menu():
     while True:
         try:
             # probably dont need a dictionary i think i can bind the function with a list 
-            list = [1,2,3,4,5]
+            
             
 
             choose = int(input("choose an option "))    
             if choose not in list:
                 print("not a valid input, try again")
-                continue
 
 
                 # trying to assign each input to call its respected function
-            if choose == list[1]:
+            if choose == 1:
                 new_task
-            elif choose == list[2]:
+            elif choose == 2:
                 show_task
-            elif choose == list[3]:
+            elif choose == 3:
                 mark_complete
-            elif choose == list[4]:
+            elif choose == 4:
                 delete_task
             else:
-                exit_program
-                
+                print("exiting program")
+                    # exit_program
+                continue    
             break
                                 
         except ValueError:
