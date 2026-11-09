@@ -4,52 +4,7 @@ list = [1,2,3,4,5]
 
 # created the Main menu
 # how do i keep displaying the menu until the user chooses to exit the application
-def main_menu():
-    print("----Terminal Based To-Do List----")
-    print("----Main Menu----")
-    print("1. Add a Task")
-    print("2. view all tasks")
-    print("3. Mark a task as completed")
-    print("4. Delete a task")
-    print("5. Exit")
 
-
-    
-
-    while True:
-        try:
-            # probably dont need a dictionary i think i can bind the function with a list 
-            
-            
-
-            choose = int(input("choose an option "))    
-            if choose not in list:
-                print("not a valid input, try again")
-
-
-                # trying to assign each input to call its respected function
-            if choose == 1:
-                new_task
-            elif choose == 2:
-                show_task
-            elif choose == 3:
-                mark_complete
-            elif choose == 4:
-                delete_task
-            else:
-                print("exiting program")
-                     # exit_program
-                continue    
-            break
-                                
-        except ValueError:
-            print(" oops!, not a valid input")
-
-main_menu()
-
-    
-
-task_input = input("enter new task ")
 
 
 
@@ -142,7 +97,52 @@ def exit_program():
 
     
 
+def main_menu():
+    print("----Terminal Based To-Do List----")
+    print("----Main Menu----")
+    print("1. Add a Task")
+    print("2. view all tasks")
+    print("3. Mark a task as completed")
+    print("4. Delete a task")
+    print("5. Exit")
 
+
+    
+
+    while True:
+        try:
+            # probably dont need a dictionary i think i can bind the function with a list 
+            
+            
+
+            choose = int(input("choose an option "))    
+            if choose not in list:
+                print("not a valid input, try again")
+
+
+                # trying to assign each input to call its respected function
+            if choose == 1:
+                new_task
+            elif choose == 2:
+                show_task
+            elif choose == 3:
+                mark_complete
+            elif choose == 4:
+                delete_task
+            else:
+                print("exiting program")
+                     # exit_program
+                continue    
+            break
+                                
+        except ValueError:
+            print(" oops!, not a valid input")
+
+main_menu()
+
+    
+
+task_input = input("enter new task ")
 
 
 
