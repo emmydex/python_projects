@@ -10,7 +10,7 @@ tasks = []
 
         #1
 def new_task(): 
-            
+            task_input = input("enter new task ") 
             tasks.append({"task": task_input, "Done": False})
             
 
@@ -29,7 +29,8 @@ def new_task():
         #2
 def show_task():
             for number, task in enumerate(tasks, start=1):
-                if task_input :
+                # instead of using the task_input, i could use tasks and check if the list is occupied
+                if tasks :
                     print(f"This are all the added tasks: {number}, {task}")
                 else:
                     print("no tasks available")
@@ -132,7 +133,7 @@ def main_menu():
 main_menu()
 
     
-task_input = input("enter new task ") 
+
 
 
 
