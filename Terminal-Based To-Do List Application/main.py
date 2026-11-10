@@ -91,7 +91,7 @@ def delete_task():
     # delete_task()
 
 def exit_program():
-            print("closing program")
+            print("exiting program goodbye")
 
     
 
