@@ -44,6 +44,7 @@ def mark_complete():
             # to try again.
         while True:
             if not tasks:
+                print("no visible tassk")
                 return
 
             try:
