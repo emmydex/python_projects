@@ -130,7 +130,7 @@ def main_menu():
                                     
             except ValueError:
                 print(" oops!, not a valid input")
-        break
+        
 
         if choose == 1:
              list[1]
