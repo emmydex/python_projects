@@ -13,16 +13,16 @@ def new_task():
                 #this function is to validate input not having empty string or whitespace only
                 def validate_task_input():
                     
-                        try:
-                            if not task_input or not task_input.strip():
-                                print("cannot be empty or whitespace only.")
-                                continue
+                    try:
+                        if not task_input or not task_input.strip():
+                            print("cannot be empty or whitespace only.")
+                            # continue
 
-                            else:
-                                print(f"task '{task_input}' added succesfully")
-                            break
-                        except ValueError, IndexError:
-                            print("try again")
+                        else:
+                            print(f"task '{task_input}' added succesfully")
+                        break
+                    except ValueError, IndexError:
+                        print("try again")
 
                 validate_task_input()
             
@@ -30,6 +30,7 @@ def new_task():
 
 # this function shows the tasks available
 def show_task():
+            # the enumerate gives each task a visible number 
             for number, task in enumerate(tasks, start=1):
                 # instead of using the task_input, i could use tasks and check if the list is occupied
                 if tasks :
@@ -40,14 +41,15 @@ def show_task():
 
         # this function shows the tasks and marks the selected ones as done
 
-        #3
+    
 def mark_complete():
+        # this displays all visible tasks 
         show_task()
             # i wrapped this in a while loop so i can catch the wrong input and prompt the user
             # to try again.
         while True:
             if not tasks:
-                print("no visible tassk")
+                print("no visible task")
                 return
 
             try:
@@ -67,9 +69,8 @@ def mark_complete():
             except ValueError, IndexError:
                 print("Please enter a valid number")
 
-    # mark_complete()
 
-        #4
+
 def delete_task():
             print(tasks)
 
@@ -91,7 +92,7 @@ def delete_task():
                 except ValueError, IndexError:
                     print("Enter a valid input")
 
-    # delete_task()
+
 
 def exit_program():
             print("exiting program goodbye")
