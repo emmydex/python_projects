@@ -1,12 +1,9 @@
 tasks = []            
 
 
-
-
-
     # this function adds a new task and appends it to the tasks list
 
-        #1
+
 def new_task():
             while True:
                 task_input = input("enter new task ") 
@@ -30,9 +27,8 @@ def new_task():
                 validate_task_input()
             
 
-    # new_task()
 
-        #2
+# this function shows the tasks available
 def show_task():
             for number, task in enumerate(tasks, start=1):
                 # instead of using the task_input, i could use tasks and check if the list is occupied
@@ -41,7 +37,6 @@ def show_task():
                 else:
                     print("no tasks available")
 
-        # show_task()
 
         # this function shows the tasks and marks the selected ones as done
 
