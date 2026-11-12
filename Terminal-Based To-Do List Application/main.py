@@ -78,7 +78,7 @@ def delete_task():
                         print("task successfully deleted")
                     break
 
-                except ValueError, IndexError:
+                except (ValueError, IndexError):
                     print("Enter a valid input")
 
 
