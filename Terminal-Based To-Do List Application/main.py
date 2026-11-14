@@ -2,7 +2,7 @@ tasks = []
 
 
     # this function adds a new task and appends it to the tasks list
-
+# battery about to die 
 
 def new_task():
     while True:
