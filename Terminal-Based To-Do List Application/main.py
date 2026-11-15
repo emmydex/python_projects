@@ -110,7 +110,7 @@ def main_menu():
 
         while True:
             try:
-                # trying to map choose to the functions using dispach dictionary
+                # trying to map choose to the functions using dispatch dictionary
                 
                 list = {1 : new_task, 2 : show_task, 3 : mark_complete, 4 : delete_task, 5 : exit_program}
 
@@ -127,18 +127,18 @@ def main_menu():
             except ValueError:
                 print(" oops!, not a valid input")
         
-
-        if choose == 1:
-             list[1]
-        elif choose == 2:
-             list[2]
-        elif choose == 3:
-             list[3]
-        elif choose == 4:
-             list[4]
-        elif choose == 5:
-             list[5]
-             break
+        # dispatch  dictionary already does the job for the if statement. 
+        # if choose == 1:
+        #      list[1]
+        # elif choose == 2:
+        #      list[2]
+        # elif choose == 3:
+        #      list[3]
+        # elif choose == 4:
+        #      list[4]
+        # elif choose == 5:
+        #      list[5]
+        #      break
 
 
 main_menu()
