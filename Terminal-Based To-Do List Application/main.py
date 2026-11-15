@@ -9,7 +9,8 @@ tasks = []
 def new_task():
     while True:
         task_input = input("enter new task ")
-        if not task_input:
+        # used the strip() method to catch whitespaces
+        if not task_input or not task_input.strip():
             print("can not be empty or whitespace")
             continue
 
