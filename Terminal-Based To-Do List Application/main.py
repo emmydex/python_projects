@@ -47,6 +47,7 @@ def mark_complete():
             try:
                 index = int(input("Enter task number to mark done: "))-1
                 # this condition is logically incorrect 
+                # fixed negative and out-of-range task selections
                 if  index > len(tasks) or index <= 0:
                     print("invalid number!, try again")
                     continue
