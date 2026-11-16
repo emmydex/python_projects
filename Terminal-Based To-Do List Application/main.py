@@ -62,8 +62,8 @@ def mark_complete():
                         # this exeption should catch both the ValueError and IndexError
             except ValueError, IndexError:
                 print("Please enter a valid number")
-
-
+                
+# a new bug has showed its face as the program does not stop completely when i end the program 
 
 def delete_task():
             print(tasks)
