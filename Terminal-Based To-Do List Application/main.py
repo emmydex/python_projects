@@ -26,7 +26,7 @@ def show_task():
             for number, task in enumerate(tasks, start=1):
                 # instead of using the task_input, i could use tasks and check if the list is occupied
                 if tasks :
-                    print(f"This are all the added tasks: {number}, {task}")
+                    print(f"This are all the added tasks: {number}, {task}")  
                 else:
                     print("no tasks available")
 
@@ -46,6 +46,7 @@ def mark_complete():
 
             try:
                 index = int(input("Enter task number to mark done: "))-1
+                # this condition is logically incorrect 
                 if 0 >= index > len(tasks):
                     print("invalid number!, try again")
                     continue
