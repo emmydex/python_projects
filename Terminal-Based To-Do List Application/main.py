@@ -24,7 +24,7 @@ def new_task():
 def show_task():
             # the if statement checks if the list is empty before entering the for loop
             if not tasks:
-                 print("tasks is empty")
+                 print("list is empty")
             else:
             # the enumerate gives each task a visible number 
                 for number, task in enumerate(tasks, start=1):
