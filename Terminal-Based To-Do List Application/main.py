@@ -22,13 +22,17 @@ def new_task():
 
 # this function shows the tasks available
 def show_task():
+            # the if statement checks if the list is empty before entering the for loop
+            if not tasks:
+                 print("tasks is empty")
+            else:
             # the enumerate gives each task a visible number 
-            for number, task in enumerate(tasks, start=1):
-                # instead of using the task_input, i could use tasks and check if the list is occupied
-                if tasks :
-                    print(f"This are all the added tasks: {number}, {task}")  
-                else:
-                    print("no tasks available")
+                for number, task in enumerate(tasks, start=1):
+                    # instead of using the task_input, i could use tasks and check if the list is occupied
+                    if tasks :
+                        print(f"This are all the added tasks: {number}, {task}")  
+                    else:
+                        print("no tasks available")
 
 
         # this function shows the tasks and marks the selected ones as done
