@@ -1,3 +1,4 @@
+import sys
 tasks = []            
 
 
@@ -91,9 +92,10 @@ def delete_task():
                     print("Enter a valid input")
 
 
-
+# used the import sys and the .exit() 
 def exit_program():
             print("exiting program goodbye")
+            sys.exit()
 
     
 
@@ -120,12 +122,14 @@ def main_menu():
                 if choose not in option_list:
                     print("not a valid input, try again")
                     continue
-                elif choose == 5:
-                        option_list[choose]()
-                        break
+                
                 elif choose in option_list:
                     option_list[choose]() # calls the function
-                #  the elif checks if the key value of 5 is used then the program breaks
+
+                    # placed the statement inside the elif block 
+                    if choose == 5:
+                         break
+                
                 
                                     
             except ValueError:
