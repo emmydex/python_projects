@@ -127,8 +127,10 @@ def main_menu():
 
                 elif choose in list:
                     list[choose]() # calls the function
-                        
-                break
+                #  the elif checks if the key value of 5 is used then the program breaks
+                elif choose == 5:
+                    list[choose]()
+                    break
                                     
             except ValueError:
                 print(" oops!, not a valid input")
