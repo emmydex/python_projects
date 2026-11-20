@@ -111,14 +111,14 @@ def main_menu():
         print("5. Exit")
 
 
-        # i found out about dispach dictionary
-        
+        # i renamed the variable and moved the dictionary outside the loop
+        option_list = {1 : new_task, 2 : show_task, 3 : mark_complete, 4 : delete_task, 5 : exit_program}
 
         while True:
             try:
                 # trying to map choose to the functions using dispatch dictionary
                 
-                list = {1 : new_task, 2 : show_task, 3 : mark_complete, 4 : delete_task, 5 : exit_program}
+                
 
                 choose = int(input("choose an option "))    
                 if choose not in list:
@@ -126,7 +126,7 @@ def main_menu():
                     continue
 
                 elif choose in list:
-                    list[choose]() # calls the function
+                    option_list[choose]() # calls the function
                 #  the elif checks if the key value of 5 is used then the program breaks
                 elif choose == 5:
                     list[choose]()
