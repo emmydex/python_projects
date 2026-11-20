@@ -121,15 +121,15 @@ def main_menu():
                 
 
                 choose = int(input("choose an option "))    
-                if choose not in list:
+                if choose not in option_list:
                     print("not a valid input, try again")
                     continue
 
-                elif choose in list:
+                elif choose in option_list:
                     option_list[choose]() # calls the function
                 #  the elif checks if the key value of 5 is used then the program breaks
                 elif choose == 5:
-                    list[choose]()
+                    option_list[choose]()
                     break
                                     
             except ValueError:
