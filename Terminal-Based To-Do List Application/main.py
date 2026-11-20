@@ -116,37 +116,21 @@ def main_menu():
 
         while True:
             try:
-                # trying to map choose to the functions using dispatch dictionary
-                
-                
-
                 choose = int(input("choose an option "))    
                 if choose not in option_list:
                     print("not a valid input, try again")
                     continue
-
+                elif choose == 5:
+                        option_list[choose]()
+                        break
                 elif choose in option_list:
                     option_list[choose]() # calls the function
                 #  the elif checks if the key value of 5 is used then the program breaks
-                elif choose == 5:
-                    option_list[choose]()
-                    break
+                
                                     
             except ValueError:
                 print(" oops!, not a valid input")
         
-        # dispatch  dictionary already does the job for the if statement. 
-        # if choose == 1:
-        #      list[1]
-        # elif choose == 2:
-        #      list[2]
-        # elif choose == 3:
-        #      list[3]
-        # elif choose == 4:
-        #      list[4]
-        # elif choose == 5:
-        #      list[5]
-        #      break
 
 
 main_menu()
