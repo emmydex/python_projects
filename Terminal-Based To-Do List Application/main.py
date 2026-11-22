@@ -145,4 +145,5 @@ main_menu()
 
 
 
-print(tasks)
+# i also learnt that writing a function name without the () while having it in a dictionary is storing the function inside the dictionary 
+# while passing the name with the parenthesis is calling the function 
