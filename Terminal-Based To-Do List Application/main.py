@@ -65,7 +65,8 @@ def mark_complete():
                     break
 
                         # this exeption should catch both the ValueError and IndexError
-            except ValueError, IndexError:
+                        # fixed the SyntaxError where two exeptions should be inside parenthesis
+            except (ValueError, IndexError):
                 print("Please enter a valid number")
                 
 # a new bug has showed its face as the program does not stop completely when i end the program 
@@ -146,5 +147,3 @@ main_menu()
 
 
 # i also learnt that writing a function name without the () while having it in a dictionary is storing the function inside the dictionary 
-# while passing the name with the parenthesis is calling the function 
-#  see you tomorrow
