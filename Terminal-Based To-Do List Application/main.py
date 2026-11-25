@@ -51,9 +51,25 @@ def mark_complete():
 
             try:
                 index = int(input("Enter task number to mark done: "))-1
-                # this condition is logically incorrect 
-                # fixed negative and out-of-range task selections
-                if  index > len(tasks) or index <= 0:
+
+                    # Remember that you subtract one from the user's selection.
+
+                    # Suppose your list contains three tasks:
+                    # User selection	Index after subtracting 1
+                    # 1	                    0
+                    # 2	                    1
+                    # 3	                    2
+
+                    # Your condition rejects index 0, meaning the user cannot select the first task.
+
+                    # It also allows index 3, which doesn't exist.
+
+                    # The correct logical rule is:
+                    # - Reject an index below zero.
+                    # - Reject an index greater than or equal to the list length.
+                    # You need to fix this in both mark_complete() and delete_task().
+
+                if  index >= len(tasks) or index < 0:
                     print("invalid number!, try again")
                     continue
                         
@@ -81,7 +97,7 @@ def delete_task():
                 try:
                     # i have to minus 1 from the input cause indexing starts at 0
                     delete = int(input("Select task to delete: "))-1
-                    if 0 >= delete > len(tasks):
+                    if delete < 0 and delete >= len(tasks):
                         print("invalid input, try again")
                         continue
                     else:
